@@ -3,7 +3,6 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 from functions import (analyze_k_values,
                        analyze_k_values_and_distance_metrics,
-                       analyze_gender_performance,
                        run_experiment,
                        analyze_confusion)
 
@@ -21,8 +20,6 @@ if __name__ == '__main__':
     # Q2
     results = analyze_k_values_and_distance_metrics(data, k_values, distance_metrics)
     print(results)
-
-    analyze_gender_performance(data)
 
     # Q4
     conf_matrix, _, classes = run_experiment(data, k=5)
